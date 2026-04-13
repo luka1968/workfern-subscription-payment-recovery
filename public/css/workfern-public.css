@@ -1,0 +1,50 @@
+/**
+ * Public Styles â€?Woo Stripe Recovery Pro
+ *
+ * Minimal styles for the public-facing recovery page.
+ *
+ * @since   1.0.0
+ * @package WooStripeRecoveryPro
+ */
+
+/* Recovery page container */
+.workfern-recovery-wrap {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.workfern-recovery-wrap h2 {
+    margin: 0 0 16px;
+    font-size: 20px;
+    color: #1d2327;
+}
+
+.workfern-recovery-wrap p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.workfern-recovery-btn {
+    display: inline-block;
+    background: #0073aa;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.workfern-recovery-btn:hover {
+    background: #005177;
+    color: #fff;
+}

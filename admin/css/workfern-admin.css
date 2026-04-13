@@ -1,0 +1,753 @@
+/**
+ * Admin Styles â€?Woo Stripe Recovery Pro
+ *
+ * All admin styles consolidated into this single file.
+ * Loaded via wp_enqueue_style() in WORKFERN_Admin::enqueue_styles().
+ *
+ * @since   1.0.0
+ * @package WooStripeRecoveryPro
+ */
+
+/* ==========================================================================
+   Dashboard Layout
+   ========================================================================== */
+
+.workfern-overview-wrap,
+.workfern-recovery-log-wrap,
+.workfern-settings-wrap {
+    max-width: 1200px;
+}
+
+/* ==========================================================================
+   Dashboard Wrapper (Overview & Tabs)
+   ========================================================================== */
+
+.workfern-dashboard-wrapper {
+    margin-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* ==========================================================================
+   Header Card (Overview Banner)
+   ========================================================================== */
+
+.workfern-header-card {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    border-radius: 12px;
+    padding: 24px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+    margin-bottom: 24px;
+}
+
+.workfern-header-info h2 {
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.workfern-header-info p {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Status Badge (Shared)
+   ========================================================================== */
+
+.workfern-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.workfern-status-badge .dashicons {
+    margin-right: 6px;
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Recovery Log status badges */
+.workfern-status-recovered {
+    background: #46b450;
+    color: #fff;
+}
+
+.workfern-status-failed {
+    background: #dc3232;
+    color: #fff;
+}
+
+.workfern-status-pending {
+    background: #ffb900;
+    color: #1d2327;
+}
+
+/* ==========================================================================
+   Status Indicator
+   ========================================================================== */
+
+.workfern-status-indicator {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.workfern-status-active {
+    background: #46b450;
+}
+
+.workfern-status-inactive {
+    background: #dc3232;
+}
+
+/* ==========================================================================
+   Stats Grid (Overview Cards)
+   ========================================================================== */
+
+.workfern-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.workfern-stat-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.workfern-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.workfern-stat-icon {
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.workfern-icon-failed {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+.workfern-icon-recovered {
+    background: #dcfce7;
+    color: #22c55e;
+}
+
+.workfern-icon-pending {
+    background: #fef3c7;
+    color: #f59e0b;
+}
+
+.workfern-icon-rate {
+    background: #e0e7ff;
+    color: #6366f1;
+}
+
+.workfern-icon-revenue-failed {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.workfern-icon-revenue-recovered {
+    background: #f0fdf4;
+    color: #16a34a;
+}
+
+.workfern-icon-revenue-outstanding {
+    background: #fffbeb;
+    color: #d97706;
+}
+
+.workfern-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 32px 0 16px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.workfern-stat-card h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.workfern-stat-number {
+    margin: 8px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+/* ==========================================================================
+   Content Card (Recovery Log, Settings Tabs)
+   ========================================================================== */
+
+.workfern-content-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    margin-bottom: 24px;
+}
+
+.workfern-content-card h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 12px;
+    color: #1e293b;
+}
+
+.workfern-content-card table {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* ==========================================================================
+   Nav Tabs
+   ========================================================================== */
+
+.workfern-nav-tab-wrapper {
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   Settings Page
+   ========================================================================== */
+
+.workfern-settings-wrap {
+    max-width: 800px;
+}
+
+.workfern-settings-wrap .form-table th {
+    width: 220px;
+    padding: 20px 10px 20px 0;
+}
+
+.workfern-settings-wrap .form-table td {
+    padding: 16px 10px;
+}
+
+.workfern-settings-wrap h2 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 30px 0 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccd0d4;
+    color: #1d2327;
+}
+
+/* ==========================================================================
+   Failed Payments Table â€?Column Widths
+   ========================================================================== */
+
+.wp-list-table .column-id {
+    width: 60px;
+}
+
+.wp-list-table .column-email {
+    width: 200px;
+}
+
+.wp-list-table .column-amount {
+    width: 100px;
+    text-align: right;
+}
+
+.wp-list-table .column-currency {
+    width: 80px;
+    text-align: center;
+}
+
+.wp-list-table .column-status {
+    width: 110px;
+}
+
+.wp-list-table .column-retry_count {
+    width: 100px;
+    text-align: center;
+}
+
+.wp-list-table .column-created_at {
+    width: 160px;
+}
+
+.wp-list-table .column-actions {
+    width: 300px;
+}
+
+/* ==========================================================================
+   Failed Payments Page â€?Stats Row
+   ========================================================================== */
+
+.workfern-stats-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.workfern-stats-row .workfern-stat-card {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    padding: 15px 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+.workfern-stats-row .workfern-stat-card h3 {
+    margin: 0 0 5px;
+    font-size: 13px;
+    color: #646970;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.workfern-stats-row .workfern-stat-card .workfern-stat-value {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* ==========================================================================
+   Analytics Dashboard
+   ========================================================================== */
+
+.workfern-analytics-wrap {
+    max-width: 1200px;
+}
+
+/* Card Grid */
+.workfern-cards-row {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+/* Primary Card */
+.workfern-card {
+    flex: 1;
+    min-width: 220px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    padding: 22px 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+    transition: box-shadow .2s, transform .2s;
+}
+
+.workfern-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    transform: translateY(-1px);
+}
+
+.workfern-card__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.workfern-card__icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+}
+
+.workfern-card__content {
+    flex: 1;
+}
+
+.workfern-card__label {
+    margin: 0 0 6px;
+    font-size: 12px;
+    color: #646970;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    font-weight: 600;
+}
+
+.workfern-card__value {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d2327;
+}
+
+/* Progress Bar */
+.workfern-card__bar {
+    margin-top: 10px;
+    height: 8px;
+    background: #e2e4e7;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.workfern-card__bar-fill {
+    height: 100%;
+    background: #826eb4;
+    border-radius: 4px;
+    transition: width .6s ease;
+}
+
+/* Secondary Card */
+.workfern-card--secondary {
+    display: block;
+    padding: 18px 20px;
+}
+
+.workfern-card--secondary .workfern-card__label {
+    margin-bottom: 8px;
+}
+
+.workfern-card__value--small {
+    font-size: 24px;
+}
+
+/* Section */
+.workfern-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 20px 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+}
+
+.workfern-section__title {
+    margin: 0 0 16px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+/* Stacked Bar */
+.workfern-stacked-bar {
+    display: flex;
+    height: 28px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.workfern-stacked-bar__segment {
+    transition: width .4s ease;
+}
+
+/* Legend */
+.workfern-legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.workfern-legend__item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #50575e;
+}
+
+.workfern-legend__dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+/* Table */
+.workfern-table th,
+.workfern-table td {
+    font-size: 13px;
+    padding: 10px 12px;
+}
+
+/* Badge */
+.workfern-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Empty State */
+.workfern-empty {
+    color: #646970;
+    font-style: italic;
+}
+
+/* Stripe Key Status */
+.workfern-key-status {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 13px;
+}
+
+.workfern-key-status--set {
+    color: #46b450;
+}
+
+/* ==========================================================================
+   Chart Containers (Analytics Dashboard)
+   ========================================================================== */
+
+.workfern-chart-container {
+    position: relative;
+    min-height: 300px;
+    margin: 20px 0;
+}
+
+/* ==========================================================================
+   Go Pro Tab Highlight
+   ========================================================================== */
+
+.nav-tab.workfern-upgrade-tab {
+    color: #FF6B35;
+    font-weight: 600;
+    border-color: transparent;
+}
+
+.nav-tab.workfern-upgrade-tab:hover,
+.nav-tab.workfern-upgrade-tab:focus {
+    color: #e55a24;
+    background: #fff8f5;
+}
+
+.nav-tab.workfern-upgrade-tab.nav-tab-active {
+    background: #fff;
+    border-color: #c3c4c7 #c3c4c7 #fff;
+    color: #FF6B35;
+}
+
+/* ==========================================================================
+   Pro Badge (Settings Teaser)
+   ========================================================================== */
+
+.workfern-pro-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: linear-gradient(135deg, #FF6B35, #e55a24);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-left: 6px;
+}
+
+/* Email Teaser */
+.workfern-email-teaser {
+    margin-top: 12px;
+    padding: 12px 16px;
+    background: #f8f9fa;
+    border: 1px dashed #d0d5dd;
+    border-radius: 6px;
+}
+
+/* ==========================================================================
+   Upgrade Hero Section
+   ========================================================================== */
+
+.workfern-upgrade-hero {
+    background: linear-gradient(135deg, #FF6B35 0%, #e55a24 100%);
+    border-radius: 12px;
+    padding: 40px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px -1px rgba(255, 107, 53, 0.3);
+}
+
+.workfern-upgrade-hero h2 {
+    margin: 0 0 12px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.workfern-upgrade-hero p {
+    margin: 0 0 24px 0;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* CTA Button */
+.workfern-cta-button {
+    display: inline-block;
+    padding: 14px 36px;
+    background: #fff;
+    color: #FF6B35;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.workfern-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    color: #e55a24;
+}
+
+/* ==========================================================================
+   Pro Features Grid
+   ========================================================================== */
+
+.workfern-pro-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.workfern-pro-feature-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workfern-pro-feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.workfern-pro-feature-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.workfern-pro-feature-icon .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+
+.workfern-pro-feature-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.workfern-pro-feature-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Comparison Table
+   ========================================================================== */
+
+.workfern-comparison-section {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.workfern-comparison-section h2 {
+    margin: 0 0 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.workfern-comparison-table thead th {
+    background: #f8fafc;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px 16px;
+}
+
+.workfern-comparison-table thead th:first-child {
+    text-align: left;
+}
+
+.workfern-comparison-table tbody td {
+    text-align: center;
+    padding: 10px 16px;
+    vertical-align: middle;
+}
+
+.workfern-comparison-table tbody td:first-child {
+    text-align: left;
+}
+
+.workfern-comparison-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+/* Upgrade Footer */
+.workfern-upgrade-footer {
+    text-align: center;
+    padding: 20px 0;
+}
