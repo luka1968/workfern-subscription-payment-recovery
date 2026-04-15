@@ -197,7 +197,7 @@ function workfern_subscriptions_missing_notice()
 			printf(
 				wp_kses(
 					/* translators: %s: URL to install WooCommerce Subscriptions */
-					__('This plugin works best with <strong>WooCommerce Subscriptions</strong> (or YITH WooCommerce Subscription). Without a subscription plugin, renewal payment failures cannot be detected. <a href="%s">Install WooCommerce Subscriptions</a>.', 'workfern-subscription-payment-recovery'),
+					__('This plugin works best with <strong>WooCommerce Subscriptions</strong>. Without a subscription plugin, renewal payment failures cannot be detected. <a href="%s">Install WooCommerce Subscriptions</a>.', 'workfern-subscription-payment-recovery'),
 					array(
 						'strong' => array(),
 						'a' => array('href' => array()),

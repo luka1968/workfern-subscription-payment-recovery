@@ -22,8 +22,7 @@ This is the **free version** of the plugin. It includes full payment failure det
 * **Failed Payment Detection**  - ?Automatically detects when a subscription renewal payment fails via WooCommerce internal hooks.
 * **Recovery Analytics Dashboard**  - ?Monitor failed payments, recovered payments, recovery rate, and revenue at a glance.
 * **Recovery Log**  - ?Full log of every failed payment attempt and its current status (pending, recovered, failed).
-* **Manual Retry**  - ?Manually retry failed payments directly from the admin dashboard.
-* **Works with WooCommerce Subscriptions**  - ?Compatible with WooCommerce Subscriptions and YITH WooCommerce Subscription.
+* **Works with WooCommerce Subscriptions**  - ?Compatible with WooCommerce Subscriptions.
 * **No Stripe Webhooks Required**  - ?Uses WooCommerce internal hooks to detect payment failures. No external webhook configuration needed.
 * **HPOS Compatible**  - ?Fully supports WooCommerce High-Performance Order Storage (HPOS / Custom Order Tables).
 
@@ -43,7 +42,7 @@ Upgrade to [Subscriptions Payment Recovery Pro](https://wordpress.workfern.com/)
 1. Upload the `workfern-subscription-payment-recovery` folder to the `/wp-content/plugins/` directory, or install the plugin through the **WordPress Plugins** screen directly.
 2. Activate the plugin through the **Plugins** screen in WordPress.
 3. Make sure **WooCommerce** is installed and activated.
-4. Optionally, install **WooCommerce Subscriptions** or **YITH WooCommerce Subscription** to enable automatic detection of subscription renewal failures.
+4. Optionally, install **WooCommerce Subscriptions** to enable automatic detection of subscription renewal failures.
 5. Navigate to **WooCommerce ->?Subscriptions Payment Recovery** to view your dashboard and configure settings.
 
 == Frequently Asked Questions ==
@@ -62,7 +61,7 @@ Yes! The [Pro version](https://wordpress.workfern.com/) adds automated recovery 
 
 = Will recovery emails be sent in the free version? =
 
-The free version does not send recovery emails. Automated recovery emails are available in the [Pro version](https://wordpress.workfern.com/). The free version provides full payment failure detection, tracking, analytics, and manual retry capabilities.
+The free version does not send recovery emails. Automated recovery emails are available in the [Pro version](https://wordpress.workfern.com/). The free version provides full payment failure detection, tracking, analytics.
 
 = Is the plugin compatible with WooCommerce HPOS (High-Performance Order Storage)? =
 
@@ -82,7 +81,6 @@ No customer personal data is sent directly by this plugin to Stripe beyond what 
 = When the connection occurs =
 
 * When the plugin automatically retries a failed payment.
-* When an admin manually clicks "Retry" on a failed payment record.
 * When verifying Stripe API credentials on the settings page.
 
 = Stripe policies =
@@ -112,7 +110,7 @@ By using this plugin, you agree to Stripe's Terms of Service and Privacy Policy.
 * Initial public release.
 * Recovery analytics dashboard with charts.
 * Full recovery log with pagination.
-* WooCommerce Subscriptions and YITH WooCommerce Subscription compatibility.
+* WooCommerce Subscriptions compatibility.
 * HPOS / Custom Order Tables compatibility.
 
 == Upgrade Notice ==
