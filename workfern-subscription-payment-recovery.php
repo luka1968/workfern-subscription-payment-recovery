@@ -3,7 +3,7 @@
  * Plugin Name:       Workfern Subscriptions Recovery for WooCommerce
  * Plugin URI:        https://wordpress.workfern.com/
  * Description:       Automatically recover failed subscription renewal payments in WooCommerce. Tracks failed/recovered revenue and provides an analytics dashboard. Works with any payment gateway.
- * Version:           2.1.4
+ * Version:           2.1.5
  * Author:            Workfern
  * Author URI:        https://workfern.com
  * License:           GPL-2.0-or-later
@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 /**
  * Plugin constants.
  */
-define('WORKFERN_PLUGIN_VERSION', '2.1.4');
+define('WORKFERN_PLUGIN_VERSION', '2.1.5');
 define('WORKFERN_PLUGIN_PATH', plugin_dir_path(__FILE__));
 define('WORKFERN_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('WORKFERN_PLUGIN_BASENAME', plugin_basename(__FILE__));
